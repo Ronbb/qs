@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "nullsafety",
+        "stringifying"
+    ],
+    "dart.vmAdditionalArgs": [
+        "--enable-experiment=non-nullable"
+    ]
+}

@@ -1,7 +1,5 @@
 library query_string;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/decoder.dart';
+export 'src/encoder.dart';
+export 'src/query_parameters_map.dart';
