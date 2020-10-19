@@ -1,14 +1,59 @@
 # query_string
 
-A new Flutter package project.
+Encode json to query string or decode query string to json.
 
-## Getting Started
+## Encode
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+```dart
+import 'package:query_string/query_string.dart' as qs;
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+const json = {
+  'key1': 11,
+  'key2': 'str',
+  'key3': false,
+  'key4': 0,
+  'key5': {'cKey1': true},
+  'key6': [0, 1],
+  'key7': [
+    {'cKey1': 233},
+    {'cKey2': false}
+  ]
+}
+
+const result = 'key_1=11&key_2=str&key_3=false&key_4=0&key_5.c_key_1=true&key_6=0&key_6=1&key_7.0.c_key_1=233&key_7.1.c_key_2=false';
+
+final encoder = qs.Encoder();
+final str = encoder.encode(json);  
+// str == result
+```
+
+## Decode
+
+```dart
+import 'package:query_string/query_string.dart' as qs;
+
+const str == 'key_1=11&key_2=str&key_3=false&key_4=0&key_5.c_key_1=true&key_6=0&key_6=1&key_7.0.c_key_1=233&key_7.1.c_key_2=false';
+
+const result = {
+  'key1': ['11'],
+  'key2': ['str'],
+  'key3': ['false'],
+  'key4': ['0'],
+  'key5': {
+    'cKey1': ['true']
+  },
+  'key6': ['1'],
+  'key7': [
+    {
+      'cKey1': ['233']
+    },
+    {
+      'cKey2': ['false']
+    }
+  ]
+};
+
+final decoder = qs.Decoder();
+final json = decoder.decode(str);
+// json == result 
+```

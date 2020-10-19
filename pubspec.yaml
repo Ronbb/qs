@@ -1,7 +1,9 @@
 name: query_string
 description: A query string stringifying library.
 version: 0.0.1-nullsafety.1
+
 homepage: https://github.com/Ronbb/query_string
+publish_to: https://pub.dev
 
 environment:
   sdk: ">=2.10.0 <3.0.0"
