@@ -1,6 +1,6 @@
 name: qs
 description: A query string stringifying library.
-version: 0.0.1-nullsafety.1
+version: 0.0.1-nullsafety.2
 
 homepage: https://github.com/Ronbb/qs
 publish_to: https://pub.dev

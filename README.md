@@ -1,11 +1,11 @@
-# query_string
+# qs
 
 Encode json to query string or decode query string to json.
 
 ## Encode
 
 ```dart
-import 'package:query_string/query_string.dart' as qs;
+import 'package:qs/qs.dart'' as qs;
 
 const json = {
   'key1': 11,
@@ -30,7 +30,7 @@ final str = encoder.encode(json);
 ## Decode
 
 ```dart
-import 'package:query_string/query_string.dart' as qs;
+import 'package:qs/qs.dart' as qs;
 
 const str == 'key_1=11&key_2=str&key_3=false&key_4=0&key_5.c_key_1=true&key_6=0&key_6=1&key_7.0.c_key_1=233&key_7.1.c_key_2=false';
 
@@ -55,5 +55,5 @@ const result = {
 
 final decoder = qs.Decoder();
 final json = decoder.decode(str);
-// json == result 
+// json == result
 ```
