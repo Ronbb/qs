@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import 'package:query_string/query_string.dart' as qs;
+import 'package:qs/qs.dart' as qs;
 
 const raw1 = {
   'key1': 11,

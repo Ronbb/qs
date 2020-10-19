@@ -1,4 +1,4 @@
-library query_string;
+library qs;
 
 export 'src/decoder.dart';
 export 'src/encoder.dart';

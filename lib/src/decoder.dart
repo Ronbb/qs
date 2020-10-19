@@ -1,4 +1,4 @@
-import 'package:query_string/src/utils.dart';
+import 'package:qs/src/utils.dart';
 
 /// Decoder
 class Decoder {
