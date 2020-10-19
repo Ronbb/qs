@@ -5,5 +5,8 @@
     ],
     "dart.vmAdditionalArgs": [
         "--enable-experiment=non-nullable"
-    ]
+    ],
+    "licenser.license": "BSD3",
+    "licenser.author": "ronbb",
+    "licenser.projectName": "query_string"
 }
