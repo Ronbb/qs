@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
+        "charcode",
+        "nnbd",
         "nullsafety",
+        "pkgs",
         "stringifying"
     ],
     "dart.vmAdditionalArgs": [

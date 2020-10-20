@@ -11,7 +11,7 @@ class Encoder {
   ///
   /// Type of [src] should be one of Map<String, dynamic>,
   /// List<Map<String, dynamic>> or String.
-  String encode(Object src) {
+  String? encode(Object src) {
     final m = _transform(src);
     return m.toString();
   }
