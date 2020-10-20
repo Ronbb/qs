@@ -1,3 +1,0 @@
-# qs
-
-example
