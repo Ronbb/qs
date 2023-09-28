@@ -1,16 +1,13 @@
 name: qs
 description: A query string encoding and encoding library. It's better to use with protobuf(go), gorilla/schema(go) and qs(js).
-version: 0.0.1-nullsafety.3
+version: 0.0.2
 
 homepage: https://github.com/Ronbb/qs
-publish_to: https://pub.dev
 
 environment:
-  # This must remain a tight constraint until nnbd is stable
-  sdk: ">=2.17.1 <3.0.0"
+  sdk: ">=2.17.1 <4.0.0"
 
-dependencies:
+# dependencies:
 
 dev_dependencies:
-  pedantic: ^1.10.0-nullsafety.1
-  test: ^1.16.0-nullsafety.5 
+  test: ^1.24.6

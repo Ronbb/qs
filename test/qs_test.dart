@@ -40,11 +40,11 @@ const decode1 = {
 void main() {
   test('encoder', () {
     final encoder = qs.Encoder();
-    expect(encoder.encode(raw1), encode1);
+    expect(encoder.encode(raw1), equals(encode1));
   });
 
   test('decoder', () {
     final decoder = qs.Decoder();
-    expect(decoder.decode(encode1), decode1);
+    expect(decoder.decode(encode1), equals(decode1));
   });
 }

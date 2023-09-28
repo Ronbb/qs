@@ -26,14 +26,14 @@ class Decoder {
         final k = isCurrentList ? currentIndex : currentKey;
         if (isCurrentList) {
           next =
-              (last as List).length > currentIndex! ? last[currentIndex] : null;
+              (last as List).length > currentIndex ? last[currentIndex] : null;
         } else {
           next = last[currentKey];
         }
 
         if (next == null) {
           if (isCurrentList) {
-            (last as List).insert(currentIndex!, isNextList ? [] : {});
+            (last as List).insert(currentIndex, isNextList ? [] : {});
           } else {
             last[currentKey] = isNextList ? [] : {};
           }
@@ -41,7 +41,7 @@ class Decoder {
         }
 
         if (next is! Map && !isNextList || next is! List && isNextList) {
-          throw Exception('conflict key: ${currentKey}, with ${currentKey}');
+          throw Exception('conflict key: $currentKey, with $currentKey');
         }
 
         last = last[k];
@@ -56,7 +56,7 @@ class Decoder {
         obj.add(value);
         return;
       }
-      throw Exception('conflict key: ${key}, with ${lastKey}');
+      throw Exception('conflict key: $key, with $lastKey');
     });
     return m;
   }
